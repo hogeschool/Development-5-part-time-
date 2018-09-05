@@ -70,17 +70,6 @@ namespace MapReduceForPros
       return result;
     }
 
-    public static IEnumerable<T> Where<T>(IEnumerable<T> collection, Func<T, bool> condition)
-    {
-      List<T> result = new List<T>();
-      for (int i = 0; i < collection.Count(); i++)
-      {
-        if (condition(collection.ElementAt(i)))
-          result.Add(collection.ElementAt(i));
-      }
-      return result;
-    }
-
     public static IEnumerable<Tuple<T1, T2>> Join<T1, T2>(IEnumerable<T1> table1, IEnumerable<T2> table2, Func<Tuple<T1, T2>, bool> condition)
     {
       return
